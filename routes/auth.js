@@ -30,4 +30,5 @@ router.post("/register",
 router.get("/", auth, authController.autenticarusuario);
 
 
+
 module.exports = router;
