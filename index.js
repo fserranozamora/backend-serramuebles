@@ -12,7 +12,7 @@ ConectarBD();
 app.use(cors());
 //habilitación del express y json
 app.use(express.json({extended : true}));
-app.use(express.urlencoded({extended : false}));
+app.use(express.urlencoded({extendes : false}));
 
 //Creamos las Rutas del proyecto
 app.use ("/api/usuarios", require("./routes/usuarios"))
