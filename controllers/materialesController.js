@@ -55,7 +55,7 @@ exports.eliminarMateriales= async (req, res) => {
             return
         }
         await Material.findOneAndDelete({_id:req.params.id}); 
-        res.json({msg: 'El material fue eliminada'});
+        res.json({msg: 'El material fue eliminado'});
 
     } catch (err) {
         console.log(err)
