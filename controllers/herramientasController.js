@@ -47,11 +47,11 @@ exports.mostrarUnaHerramienta = async(req, res) => {
 
 // Eliminar 
 
-exports.eliminarHerramientas = async (req, res) => {
+exports.eliminarHerramientas= async (req, res) => {
     try {
         let herramientas = await Herramienta.findById(req.params.id);
         if(!herramientas) {
-            res.status(404).json({msg: 'La Herramienta no existe'});
+            res.status(404).json({msg: 'La herramienta no existe'});
             return
         }
         await Herramienta.findOneAndDelete({_id:req.params.id}); 
