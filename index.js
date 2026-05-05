@@ -1,6 +1,8 @@
 const express = require("express");
 const ConectarBD = require("./config/db");
 const cors = require ("cors");
+const dns = require('dns');
+dns.setServers(['8.8.8.8', '1.1.1.1']);
 
 // servidor
 const app = express();
@@ -12,7 +14,7 @@ ConectarBD();
 app.use(cors());
 //habilitación del express y json
 app.use(express.json({extended : true}));
-app.use(express.urlencoded({extendes : false}));
+app.use(express.urlencoded({extended : false}));
 
 //Creamos las Rutas del proyecto
 app.use ("/api/usuarios", require("./routes/usuarios"))
