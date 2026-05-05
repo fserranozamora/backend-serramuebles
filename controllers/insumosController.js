@@ -55,7 +55,7 @@ exports.eliminarInsumos= async (req, res) => {
             return
         }
         await Insumo.findOneAndDelete({_id:req.params.id}); 
-        res.json({msg: 'El insumo fue eliminada'});
+        res.json({msg: 'El insumo fue eliminado'});
 
     } catch (err) {
         console.log(err)
